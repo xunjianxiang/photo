@@ -11,25 +11,25 @@
 
 #### Mac
 
-(下载最新版本 pkg 安装包进行安装)[https://nodejs.org/dist/v6.11.4/node-v6.11.4.pkg]
+[下载稳定版本 pkg 安装包进行安装](https://nodejs.org/dist/v6.11.4/node-v6.11.4.pkg)
 
 #### Windows
 
-(下载最新版本 exe 安装包进行安装)[https://nodejs.org/dist/v6.11.4/node-v6.11.4-x64.msi]
+[下载稳定版本 exe 安装包进行安装](https://nodejs.org/dist/v6.11.4/node-v6.11.4-x64.msi)
 
 #### Linux
 
 ##### Ubuntu
 
 ```
-$ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 
 ##### CentOS
 ```
-$ curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
-$ sudo yum -y install nodejs
+curl --silent --location https://rpm.nodesource.com/setup_6.x | sudo bash -
+sudo yum -y install nodejs
 ```
 
 ####
@@ -41,43 +41,43 @@ $ sudo yum -y install nodejs
 #### Mac
 
 ```
-$ brew install graphicsmagick
+brew install graphicsmagick
 ```
 
 #### Windows
 
-(下载最新版本 exe 文件进行安装)[ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/windows/]
+[下载最新版本 exe 安装包进行安装](ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/windows/)
 
 
 #### Linux
 
 ##### Ubuntu
 
-`$ sudo apt-get install graphicsmagick`
+`sudo apt-get install graphicsmagick`
 
 
 ##### CentOS 7
 ###### 安装相关依赖
 
 ```
-$ sudo yum install -y gcc libpng libjpeg libpng-devel libjpeg-devel ghostscript libtiff libtiff-devel freetype freetype-devel
+sudo yum install -y gcc libpng libjpeg libpng-devel libjpeg-devel ghostscript libtiff libtiff-devel freetype freetype-devel
 ```
 
 
 ###### 下载并解压到目录
 
 ```
-$ wget https://jaist.dl.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.26/GraphicsMagick-1.3.26.tar.xz
-$ tar -xvf GraphicsMagick-1.3.26.tar.gz -C /usr/local/
+wget https://jaist.dl.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.26/GraphicsMagick-1.3.26.tar.xz
+tar -xvf GraphicsMagick-1.3.26.tar.gz -C /usr/local/
 ```
 
 ###### 编译并安装
 
 ```
-$ cd /usr/local/GraphicsMagick-1.3.26
-$ ./configure --prefix=/usr/local/GraphicsMagick-1.3.26 --enable-shared
-$ sudo make
-$ sudo make install
+cd /usr/local/GraphicsMagick-1.3.26
+./configure --prefix=/usr/local/GraphicsMagick-1.3.26 --enable-shared
+sudo make
+sudo make install
 ```
 
 ###### 添加环境变量
@@ -91,12 +91,12 @@ export PATH=$PATH:$GM_HOME/bin
 加载环境变量：
 
 ```
-$ source ~/.bash_profile
+source ~/.bash_profile
 ```
 
 ###### 验证
 ```
-$ gm version
+gm version
 ```
 
 ## 快速开始
@@ -104,7 +104,7 @@ $ gm version
 ### 获取源代码
 
 ```
-$ git clone https://github.com/xunjianxiang/photo.git
+git clone https://github.com/xunjianxiang/photo.git
 ```
 
 ### 修改配置文件
@@ -114,7 +114,7 @@ $ git clone https://github.com/xunjianxiang/photo.git
 ### 安装依赖
 
 ```
-$ npm install --production
+npm install --production
 ```
 
 ### 图片预处理
@@ -122,11 +122,11 @@ $ npm install --production
 > 为图片生成缩略图
 
 * 在安装依赖完成后悔对图片进行一次预处理
-* 手动执行`$ npm run install`会对图进行一次预处理
+* 手动执行`npm run install`会对图进行一次预处理
 * 访问过程中，会检测图片缩略图，如果不存在，则会为当前图片生成缩略图
 
 ### 开启服务
 
 ```
-$ npm run start
+npm run start
 ```
