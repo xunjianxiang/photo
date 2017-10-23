@@ -50,4 +50,4 @@ app.get('/api/ls/*', function (req, res) {
   res.send(ls(req.params[0]))
 })
 
-app.listen(3000)
+app.listen(3000, '0.0.0.0')

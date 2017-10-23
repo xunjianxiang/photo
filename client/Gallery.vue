@@ -77,10 +77,6 @@ export default {
       }
     }
   },
-  components: {
-    Carousel,
-    Slide
-  },
   mounted () {
     window.onresize = () => {
       this.setCarsouselHeight()
