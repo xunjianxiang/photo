@@ -46,7 +46,7 @@ brew install graphicsmagick
 
 #### Windows
 
-[下载最新版本 exe 安装包进行安装](ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/windows/)
+[下载最新版本 exe 安装包进行安装](http://ftp.icm.edu.pl/pub/unix/graphics/GraphicsMagick/windows/)
 
 
 #### Linux
