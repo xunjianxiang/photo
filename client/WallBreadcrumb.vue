@@ -6,18 +6,12 @@
   </el-breadcrumb>
 </template>
 
-<style lang="scss" scoped>
-  .wall-breadcrumb {
-    padding: 13px 0;
-  }
-</style>
-
 <script>
 export default {
   computed: {
     list () {
       let list = [];
-      list.push({ name: '首页' })
+      list.push({ name: '数盟照片墙' })
       if (!this.$route.params.path) return list;
       let array = this.$route.params.path.split('/')
       array.forEach(function(item, index) {

@@ -22,7 +22,7 @@ let WebpackConfig = {
   },
   output: {
     path: distBase,
-    publicPath: '/',
+    publicPath: WebpackDevEnvironment ? '/' : '/dist/',
     filename: `javascripts/[name]-[${WebpackDevEnvironment ? 'hash' : 'chunkhash'}:8].min.js`,
     chunkFilename: `javascripts/[name]-[${WebpackDevEnvironment ? 'hash' : 'chunkhash'}:8].min.js`
   },
@@ -36,24 +36,12 @@ let WebpackConfig = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            query: {
-              presets: ['es2015', 'stage-3'],
-              plugins: ['transform-class-properties']
-            }
-          }
-        ]
+        use: 'babel-loader'
       },
       {
         test: /\.vue$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'vue-loader'
-          }
-        ]
+        use: 'vue-loader'
       },
       {
         test: /\.css$/,
@@ -85,13 +73,6 @@ let WebpackConfig = {
     }),
     new FriendlyErrorsPlugin()
   ],
-  externals: {
-    // 'vue': 'Vue',
-    // 'vuex': 'Vuex',
-    // 'axios': 'axios',
-    // 'vue-router': 'VueRouter',
-    // 'element-ui': 'ELEMENT'
-  },
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {
@@ -100,6 +81,11 @@ let WebpackConfig = {
   },
   devtool: 'source-map',
   devServer: {
+    proxy: {
+      '/api': 'http://localhost:3000',
+      '/images': 'http://localhost:3000',
+      '/thumbnails': 'http://localhost:3000'
+    },
     overlay: {
       warnings: true,
       errors: true

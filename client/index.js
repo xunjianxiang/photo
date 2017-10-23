@@ -1,6 +1,6 @@
 'use strict'
 
-import 'element-ui/lib/theme-chalk/index.css'
+import 'element-ui/lib/theme-default/index.css'
 import 'font-awesome/css/font-awesome.css'
 import './index.scss'
 import Vue from 'vue'

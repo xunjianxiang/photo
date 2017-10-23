@@ -1,10 +1,11 @@
 <template>
-  <el-container class="fullheight">
-    <el-header>
+  <!-- <div class="flex flex-vertical height-full">
+    <div>
       <Topbar/>
-    </el-header>
-    <router-view></router-view>
-  </el-container>
+    </div>
+    <router-view class="flex-spacer"></router-view>
+  </div> -->
+  <router-view></router-view>
 </template>
 
 
