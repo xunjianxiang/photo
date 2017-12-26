@@ -18,7 +18,7 @@ let EventManager = {
   start () {
     let index = 0
     let next = () => {
-      let task = this.list[index++]
+      let task = this.list[ index++ ]
       if (!task) return this.end()
       task instanceof Function && task(next)
     }
@@ -35,7 +35,7 @@ function recursion (folder, next) {
     if (item.type === 'folder') {
       console.log('发现目录：%s', path.resolve(config.root, folder, item.name))
       EventManager.add(function (next) {
-        recursion(item.name, next)
+        recursion(path.join(folder, item.name), next)
       })
     } else {
       console.log('发现图片：%s', path.resolve(config.root, folder, item.name))
